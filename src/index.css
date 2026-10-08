@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-editorial: 'Playfair Display', Georgia, serif;
+
+  --color-bistro-ivory: #F8F5EE;
+  --color-bistro-cream: #F2ECE0;
+  --color-bistro-dark: #1E221B;
+  --color-bistro-olive: #2B3526;
+  --color-bistro-forest: #1A2218;
+  --color-bistro-terracotta: #C85A32;
+  --color-bistro-rust: #9E3F1F;
+  --color-bistro-amber: #E29938;
+  --color-bistro-gold: #CCA059;
+  --color-bistro-tan: #DDD3C1;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F8F5EE;
+    color: #1E221B;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+}
+
+/* Wrought iron filigree pattern */
+.bg-wrought-iron-subtle {
+  background-image: radial-gradient(#2B3526 0.75px, transparent 0.75px), radial-gradient(#2B3526 0.75px, #F8F5EE 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-color: #F8F5EE;
+}
+
+.bg-vintage-grain {
+  background-color: #F8F5EE;
+  background-image: radial-gradient(rgba(43, 53, 38, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Asymmetrical vintage block borders inspired by editorial Hearth & Mug style */
+.retro-border {
+  border: 2px solid #1E221B;
+  box-shadow: 4px 4px 0px #1E221B;
+}
+
+.retro-border-terracotta {
+  border: 2px solid #1E221B;
+  box-shadow: 4px 4px 0px #C85A32;
+}
+
+.retro-border-olive {
+  border: 2px solid #1E221B;
+  box-shadow: 5px 5px 0px #2B3526;
+}
+
+.retro-border-cream {
+  border: 2px solid #F8F5EE;
+  box-shadow: 4px 4px 0px rgba(248, 245, 238, 0.3);
+}
+
+.retro-border-amber {
+  border: 2px solid #1E221B;
+  box-shadow: 4px 4px 0px #E29938;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2ECE0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B3526;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C85A32;
+}
+
+/* Tactile popup spring animations */
+@keyframes popupSpringBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(24px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.025) translateY(-3px);
+  }
+  85% {
+    transform: scale(0.99) translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-popup-spring {
+  animation: popupSpringBounce 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-fade-overlay {
+  animation: fadeInOverlay 0.3s ease-out forwards;
+}
+
+

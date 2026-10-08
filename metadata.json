@@ -1,0 +1,6 @@
+{
+  "name": "Maison | Italian & Parisian Bistro Karachi",
+  "description": "An Italian and Parisian-inspired bistro nestled in Habitt City, Tipu Sultan Road, Karachi. Explore handmade recipes, wood-fired classics, and romantic courtyard dining.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
